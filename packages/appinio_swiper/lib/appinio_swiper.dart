@@ -313,7 +313,7 @@ class _AppinioSwiperState extends State<AppinioSwiper>
 
   Widget _backgroundItem(BoxConstraints constraints) {
     return Positioned(
-      top: _difference,
+      top: 0,
       left: 0,
       child: Container(
         color: Colors.transparent,
