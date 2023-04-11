@@ -98,7 +98,7 @@ class _AppinioSwiperState extends State<AppinioSwiper>
   double _angle = 0;
   double _maxAngle = 0;
   double _scale = 0.9;
-  double _difference = 40;
+  double _difference = 0;
   int currentIndex = 0;
 
   int _swipeType = 0; // 1 = swipe, 2 = unswipe, 3 = goBack
