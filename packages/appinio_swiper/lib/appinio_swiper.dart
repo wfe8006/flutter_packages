@@ -85,6 +85,7 @@ class AppinioSwiper extends StatefulWidget {
     this.onEnd,
     this.unswipe,
     this.onDrag,
+    this.onDragEnd,
     this.direction = AppinioSwiperDirection.right,
   })  : assert(maxAngle >= 0 && maxAngle <= 360),
         assert(threshold >= 1 && threshold <= 100),
