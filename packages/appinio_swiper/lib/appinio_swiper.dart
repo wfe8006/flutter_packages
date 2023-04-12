@@ -300,9 +300,9 @@ class _AppinioSwiperState extends State<AppinioSwiper>
                   fit: StackFit.expand,
                   children: [
                     //if (widget.loop || currentIndex < widget.cardsCount - 1)
-                    //  _backgroundItem(constraints),
+                    _backgroundItem(constraints),
                     //if (currentIndex < widget.cardsCount)
-                    _foregroundItem(constraints)
+                    //_foregroundItem(constraints)
                   ]);
             },
           ),
