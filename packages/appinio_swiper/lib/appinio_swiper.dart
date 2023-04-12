@@ -59,6 +59,8 @@ class AppinioSwiper extends StatefulWidget {
   /// function that gets called with the boolean true when the last card gets unswiped and with the boolean false when there is no card to unswipe
   final OnUnSwipe? unswipe;
 
+  final OnDrag? onDrag;
+
   /// direction in which the card gets swiped when triggered by controller, default set to right
   final AppinioSwiperDirection direction;
 
@@ -80,6 +82,7 @@ class AppinioSwiper extends StatefulWidget {
     this.onSwipe,
     this.onEnd,
     this.unswipe,
+    this.onDrag,
     this.direction = AppinioSwiperDirection.right,
   })  : assert(maxAngle >= 0 && maxAngle <= 360),
         assert(threshold >= 1 && threshold <= 100),
@@ -371,6 +374,8 @@ class _AppinioSwiperState extends State<AppinioSwiper>
                   break;
               }
               _total = _left + _top;
+
+              widget.onDrag?.call(_left, _top);
               _calculateAngle();
               _calculateScale();
               _calculateDifference();
