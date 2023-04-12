@@ -61,6 +61,8 @@ class AppinioSwiper extends StatefulWidget {
 
   final OnDrag? onDrag;
 
+  final OnDragEnd? onDragEnd;
+
   /// direction in which the card gets swiped when triggered by controller, default set to right
   final AppinioSwiperDirection direction;
 
@@ -388,6 +390,8 @@ class _AppinioSwiperState extends State<AppinioSwiper>
             _tapOnTop = false;
             _onEndAnimation();
             _animationController.forward();
+
+            widget.onDragEnd?.call();
           }
         },
       ),
