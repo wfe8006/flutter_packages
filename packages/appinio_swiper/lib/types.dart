@@ -7,4 +7,4 @@ typedef OnSwipe = void Function(int index, AppinioSwiperDirection direction);
 
 typedef OnUnSwipe = void Function(bool unswiped);
 
-typedef onDrag = void Function(double left, double top);
+typedef OnDrag = void Function(double left, double top);

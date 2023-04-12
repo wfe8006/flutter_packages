@@ -376,6 +376,7 @@ class _AppinioSwiperState extends State<AppinioSwiper>
               _total = _left + _top;
 
               widget.onDrag?.call(_left, _top);
+
               _calculateAngle();
               _calculateScale();
               _calculateDifference();
